@@ -19,7 +19,13 @@ public class News {
     private String email;
     private Date createdAt;
     private Date updatedAt;
-    private Date deleteAt;
+    private Date deletedAt;
+    private String description;
+    private String yearBuild;
+    private Integer bedQuantity;
+    private Integer bathroomQuantity;
+    private Integer personQuality;
+
     public News() {
     }
 
@@ -67,7 +73,32 @@ public class News {
     }
 
     @Column(name = "DELETED_AT")
-    public Date getDeleteAt() {
-        return deleteAt;
+    public Date getDeletedAt() {
+        return deletedAt;
+    }
+
+    @Column(name = "DESCRIPTION")
+    public String getDescription() {
+        return description;
+    }
+
+    @Column(name = "YEAR_BUILD")
+    public String getYearBuild() {
+        return yearBuild;
+    }
+
+    @Column(name = "BED_QUANTITY")
+    public Integer getBedQuantity() {
+        return bedQuantity;
+    }
+
+    @Column(name = "BATHROOM_QUANTITY")
+    public Integer getBathroomQuantity() {
+        return bathroomQuantity;
+    }
+
+    @Column(name = "PERSON_QUANTITY")
+    public Integer getPersonQuality() {
+        return personQuality;
     }
 }
