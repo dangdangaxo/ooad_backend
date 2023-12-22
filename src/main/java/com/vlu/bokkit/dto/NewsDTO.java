@@ -8,10 +8,6 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-//recently add
-@Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
-//recently add
 @NoArgsConstructor
 @AllArgsConstructor
 public class NewsDTO {

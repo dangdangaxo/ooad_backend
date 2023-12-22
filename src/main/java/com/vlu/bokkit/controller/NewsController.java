@@ -4,6 +4,7 @@ import com.vlu.bokkit.dto.NewsDTO;
 import com.vlu.bokkit.entity.News;
 import com.vlu.bokkit.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -28,9 +29,15 @@ public class NewsController {
     @GetMapping
     public List<NewsDTO> getAllNews() {
         List<NewsDTO> newsDTOs = newsService.getAllNews();
-//        System.prin.info("Retrieved {} news items.", newsDTOs.size());
         System.out.println("Retrieved {} news items." + newsDTOs.size());
         return newsService.getAllNews();
 
     }
+
+//    @GetMapping("/news")
+//    public ResponseEntity<List<NewsDTO>> getAllNews() {
+//        List<NewsDTO> newsList = newsService.getAllNews();
+//        return new ResponseEntity<>(newsList, HttpStatus.OK);
+//    }
+
 }

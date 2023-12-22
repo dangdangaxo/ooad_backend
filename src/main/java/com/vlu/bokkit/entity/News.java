@@ -21,9 +21,6 @@ public class News {
     private Date deleted_at;
     private String description;
     private String year_build;
-    private Integer bed_quantity;
-    private Integer bathroom_quantity;
-    private Integer person_quantity;
 
     public News() {
     }
@@ -79,20 +76,5 @@ public class News {
     @Column(name = "YEAR_BUILD")
     public String getYear_build() {
         return year_build;
-    }
-
-    @Column(name = "BED_QUANTITY")
-    public Integer getBed_quantity() {
-        return bed_quantity;
-    }
-
-    @Column(name = "BATHROOM_QUANTITY")
-    public Integer getBathroom_quantity() {
-        return bathroom_quantity;
-    }
-
-    @Column(name = "PERSON_QUANTITY")
-    public Integer getPerson_quantity() {
-        return person_quantity;
     }
 }
