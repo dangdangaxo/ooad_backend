@@ -1,5 +1,6 @@
 package com.vlu.bokkit.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import java.util.Date;
@@ -7,14 +8,15 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
+//recently add
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+//recently add
 @NoArgsConstructor
 @AllArgsConstructor
 public class NewsDTO {
-    private Long newsId;
-    private String hotelName;
-    private String address;
-    private Double price;
-    private Date createdAt;
-    private Date updatedAt;
-    private Date deletedAt;
+    private Long news_id;
+    private Date created_at;
+    private Date updated_at;
+    private Date deleted_at;
 }

@@ -22,6 +22,7 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public DetailedNewsDTO createNews(NewsDTO newsDTO) {
         News currentNews = new News();
+        BeanUtils.copyProperties(newsDTO, currentNews);
         return convertEntityToDTO(newsRepository.save(currentNews));
     }
 

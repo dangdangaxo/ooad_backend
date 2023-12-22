@@ -13,19 +13,16 @@ public class DetailedNewsDTO extends NewsDTO{
     private String amenities;
     private String email;
     private String description;
-    private String yearBuild;
-    private Integer bedQuantity;
-    private Integer bathroomQuantity;
-    private Integer personQuality;
+    private String year_build;
+    private Integer bed_quantity;
+    private Integer bathroom_quantity;
+    private Integer person_quantity;
 
-    public DetailedNewsDTO(Long newsId, String hotelName, String address, Double price, Date createdAt, Date updatedAt, Date deletedAt) {
-        super(newsId,
-                hotelName,
-                address,
-                price,
-                createdAt,
-                updatedAt,
-                deletedAt);
+    public DetailedNewsDTO(Long news_id, String hotelName, String address, Double price, Date created_at, Date updated_at, Date deleted_at) {
+        super(news_id,
+                created_at,
+                updated_at,
+                deleted_at);
     }
     public DetailedNewsDTO() {
         super();

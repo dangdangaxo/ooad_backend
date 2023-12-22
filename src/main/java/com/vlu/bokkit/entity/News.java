@@ -8,51 +8,45 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "NEWS")
+@Table(name = "news")
 @Setter
 public class News {
     private Long newsId;
-    private String hotelName;
-    private String address;
+    private Long room_id;
+    private Long hotel_id;
     private String amenities;
-    private Double price;
     private String email;
-    private Date createdAt;
-    private Date updatedAt;
-    private Date deletedAt;
+    private Date created_at;
+    private Date updated_at;
+    private Date deleted_at;
     private String description;
-    private String yearBuild;
-    private Integer bedQuantity;
-    private Integer bathroomQuantity;
-    private Integer personQuality;
+    private String year_build;
+    private Integer bed_quantity;
+    private Integer bathroom_quantity;
+    private Integer person_quantity;
 
     public News() {
     }
 
     @Id
-    @Column(name = "NEWS_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(name = "NEWS_ID")
     public Long getNewsId() { return newsId; }
 
-    @Column(name = "HOTEL_NAME")
-    public String getHotelName() {
-        return hotelName;
+    @Column(name = "ROOM_ID")
+    public Long getRoom_id() {
+        return room_id;
     }
 
-    @Column(name = "ADDRESS")
-    public String getAddress() {
-        return address;
+    @Column(name = "HOTEL_ID")
+    public Long getHotel_id() {
+        return hotel_id;
     }
+
 
     @Column(name = "AMENITIES")
     public String getAmenities() {
         return amenities;
-    }
-
-    @Column(name = "PRICE")
-    public Double getPrice() {
-        return price;
     }
 
     @Column(name = "EMAIL")
@@ -62,19 +56,19 @@ public class News {
 
     @Column(name = "CREATED_AT")
     @CreationTimestamp
-    public Date getCreatedAt() {
-        return createdAt;
+    public Date getCreated_at() {
+        return created_at;
     }
 
     @Column(name = "UPDATED_AT")
     @UpdateTimestamp
-    public Date getUpdatedAt() {
-        return updatedAt;
+    public Date getUpdated_at() {
+        return updated_at;
     }
 
     @Column(name = "DELETED_AT")
-    public Date getDeletedAt() {
-        return deletedAt;
+    public Date getDeleted_at() {
+        return deleted_at;
     }
 
     @Column(name = "DESCRIPTION")
@@ -83,22 +77,22 @@ public class News {
     }
 
     @Column(name = "YEAR_BUILD")
-    public String getYearBuild() {
-        return yearBuild;
+    public String getYear_build() {
+        return year_build;
     }
 
     @Column(name = "BED_QUANTITY")
-    public Integer getBedQuantity() {
-        return bedQuantity;
+    public Integer getBed_quantity() {
+        return bed_quantity;
     }
 
     @Column(name = "BATHROOM_QUANTITY")
-    public Integer getBathroomQuantity() {
-        return bathroomQuantity;
+    public Integer getBathroom_quantity() {
+        return bathroom_quantity;
     }
 
     @Column(name = "PERSON_QUANTITY")
-    public Integer getPersonQuality() {
-        return personQuality;
+    public Integer getPerson_quantity() {
+        return person_quantity;
     }
 }
