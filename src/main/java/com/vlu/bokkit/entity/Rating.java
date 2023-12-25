@@ -1,13 +1,14 @@
 package com.vlu.bokkit.entity;
 
 import com.vlu.bokkit.entity.converter.EnumToStringConverter;
+import com.vlu.bokkit.entity.enumClass.Star;
 import jakarta.persistence.*;
 import lombok.Setter;
 
 import java.util.Date;
 
 @Entity
-@Table(name = "rating", schema = "public")
+@Table(name = "rating", schema = "bokkit")
 @Setter
 public class Rating {
 

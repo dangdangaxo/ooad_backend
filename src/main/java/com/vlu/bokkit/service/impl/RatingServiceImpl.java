@@ -2,6 +2,7 @@ package com.vlu.bokkit.service.impl;
 
 import com.vlu.bokkit.dto.RatingDTO;
 import com.vlu.bokkit.entity.Rating;
+import com.vlu.bokkit.exception.RatingCommentAndStarNoValue;
 import com.vlu.bokkit.exception.RatingNotFoundException;
 import com.vlu.bokkit.repository.RatingRepository;
 import com.vlu.bokkit.service.RatingService;
@@ -22,6 +23,10 @@ public class RatingServiceImpl implements RatingService {
 
     @Override
     public RatingDTO setRating(RatingDTO rating) {
+        if (rating.getComment() == null || rating.getComment() == null)
+        {
+            throw new RatingCommentAndStarNoValue();
+        }
         ratingRepository.save(converRatingDTOtoEnity(rating));
         return rating;
     }
@@ -32,6 +37,10 @@ public class RatingServiceImpl implements RatingService {
          if (rating == null)
          {
              throw new RatingNotFoundException(id);
+         }
+         if (newRating.getStar() == null || newRating.getComment() == null)
+         {
+             throw new RatingCommentAndStarNoValue();
          }
          rating.setComment(newRating.getComment());
          rating.setStar(newRating.getStar());

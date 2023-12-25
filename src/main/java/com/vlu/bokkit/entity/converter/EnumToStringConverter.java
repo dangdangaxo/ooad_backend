@@ -1,6 +1,6 @@
 package com.vlu.bokkit.entity.converter;
 
-import com.vlu.bokkit.entity.Star;
+import com.vlu.bokkit.entity.enumClass.Star;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

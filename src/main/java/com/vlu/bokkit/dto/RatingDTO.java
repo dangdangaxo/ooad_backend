@@ -1,6 +1,6 @@
 package com.vlu.bokkit.dto;
 
-import com.vlu.bokkit.entity.Star;
+import com.vlu.bokkit.entity.enumClass.Star;
 import lombok.*;
 
 import java.util.Date;
