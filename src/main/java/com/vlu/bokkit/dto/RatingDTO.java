@@ -1,5 +1,6 @@
 package com.vlu.bokkit.dto;
 
+import com.vlu.bokkit.entity.enumClass.Star;
 import lombok.*;
 
 import java.util.Date;
@@ -9,10 +10,9 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO {
+public class RatingDTO {
     private Long id;
-    private String identityNumber;
-    private Date createdAt;
-    private Date updatedAt;
-    private Date deletedAt;
+    private Star star;
+    private String comment;
+    private Date createAt;
 }
