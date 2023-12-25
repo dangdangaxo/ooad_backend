@@ -28,12 +28,6 @@ docker run --rm -e "spring.profiles.active=dev" -p "5001:5001" -p "5002:5002" {B
 docker run --rm -e "spring.profiles.active=staging" -p "5001:5001" -p "5002:5002" {Builded_image}
 ```
 
-### Running with Local environment
-Run the application
-```bash
-java -jar -Dspring.profiles.active=local target/pandax-ws-{Artifact_version}.jar
-```
-
 If the local does not have PostgresDB, we can create a `docker-compose.yaml` file.
 ```
 touch docker-compose.yaml
